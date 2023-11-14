@@ -67,7 +67,7 @@ app.post('/upload', upload.single('file'), (req, res) => {
     console.log("Song Name:",response.data.songNames);
     console.log("Artist Name:",response.data.artistNames);
     apiData=response.data;
-    res.render('TextRes.ejs', { data:apiData });
+    res.render('ImageRes.ejs', { data:apiData });
   })
   .catch(error => {
     // Something went wrong
