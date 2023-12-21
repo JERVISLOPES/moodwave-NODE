@@ -27,7 +27,15 @@
                     <a class="nav-link disabled" href="#feat">Features</a>
                   </li>
                 </ul>
-
+                <!-- <div class="col-md-3 text-end">
+      
+                  <form action="/login" method="POST">
+                  <button type="submit" class="btn btn-outline-primary me-2" >Login</button>
+                  
+      
+                  <button type="button" class="btn btn-primary">Sign-up</button>
+                </form>
+                </div> -->
               </div>
             </div>
           </nav>
@@ -35,20 +43,21 @@
 
 
         <div class="px-4 py-5 my-5 text-center">
+          <!-- <img class="d-block mx-auto mb-4" src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
           <h1 class="display-5 fw-bold text-body-emphasis">Emotion Detected Successfully!</h1>
           <div class="col-lg-6 mx-auto">
             <h3 class="lead mb-4 fw-bold">Our model has guess your emotion to be: <%= data.emotion %>.</h3>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-              <form action="/textinp" method="POST">
-                <button type="submit" class="btn btn-primary btn-lg px-4 gap-3">Feeling something else?</button>
+              <form action="/imginp" method="POST">
+                <button type="submit" class="btn btn-primary btn-lg px-4 gap-3">Wanna show us something else?</button>
               </form>
+              <!-- <button type="button" class="btn btn-outline-secondary btn-lg px-4" href="#recommendation">Check Out the playlist recommendation</button> -->
             </div>
           </div>
         </div>
 
         <div class="container" id="recommendation">
           <h1 class="display-5 fw-bold text-body-emphasis mb-4">Songs Recommended:</h1>
-         
           <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
             <% for (let i = 0; i < data.songNames.length; i++) { %>
               <a href="<%= data.songLinks[i] %>" target="_blank">
@@ -71,6 +80,7 @@
             
       
           </div>
+          
 
         </div>
         
